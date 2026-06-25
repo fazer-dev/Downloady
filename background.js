@@ -1,10 +1,7 @@
-chrome.downloads.onDeterminingFilename.addListener((item, suggest) => {
-    const original = item.filename;
+chrome.downloads.onCreated.addListener((item) => {
+  console.log("Download started:", item.url);
 
-    const newName = "renamed_" + original;
-
-    suggest({
-        filename: newName,
-        conflictAction: "uniquify"
-    });
+    chrome.downloads.cancel(item.id, () => {
+    console.log("Canceled download:", item.url);
+  });
 });
