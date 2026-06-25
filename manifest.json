@@ -7,13 +7,12 @@
 	
 	"permissions": [
 		"downloads",
-		"storage",
-		"notifications"
+		"storage"
 	],
 
 	"action":{
 		"default_popup": "popup.html",
-		"default_title": "Set download name :)"
+		"default_title": "Set download location and name"
 	},
 
 	"background": {
