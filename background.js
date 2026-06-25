@@ -1,10 +1,18 @@
-chrome.downloads.onDeterminingFilename.addListener((item, suggest) => {
-    const data = await chrome.storage.local.get("downloadName");
-    const newName = data.downloadName;
+let latestDownloadedFile = null;
 
-  if (newName) {
-    suggest({ filename: newName });
-  } else {
-    suggest({ filename: item.filename });
-  }
+chrome.downloads.onChanged.addListener((delta) => {
+    if (!delta.state || delta.state.current !== "complete") return;
+
+    chrome.downloads.search(
+        { id: delta.id },
+        (results) => {
+            if (!results || results.length === 0) return;
+
+            const downloadIem = results[0];
+t
+            latestDownloadedFile = downloadItem.filename;
+
+            alert("Latest downloaded file:", latestDownloadedFile);
+        }
+    );
 });
