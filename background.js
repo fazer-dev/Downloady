@@ -4,4 +4,9 @@ chrome.downloads.onCreated.addListener((item) => {
     chrome.downloads.cancel(item.id, () => {
     console.log("Canceled download:", item.url);
   });
+  chrome.downloads.download({
+  url: item.url,
+  saveAs: true
+});
+
 });
