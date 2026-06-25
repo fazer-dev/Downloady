@@ -1,0 +1,29 @@
+{
+
+	"name": "Downloady",
+	"version": "1.0",
+	"manifest_version": 3,
+	"description": "control the names of downloaded files",
+	
+	"permissions": [
+		"downloads",
+		"storage",
+		"offscreen"
+	],
+
+	"action":{
+		"default_popup": "popup.html",
+		"default_title": "Set download name :)"
+	},
+
+	"background": {
+		"service_worker": "background.js"
+	},
+
+	"host_permissions": [
+		"<all_urls>"
+	]
+
+
+
+}
