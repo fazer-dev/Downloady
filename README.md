@@ -1,6 +1,7 @@
 # Downloady
 A simple chrome extension that allows you to choose a name for a file before it's downloade
-Just a QoL feature my mom wanted :P
+Just a QoL feature my mom wanted :P 
+This took a lot longer than I thought it would because I had to learn how to make a chrome extension.
 
 
 ## How She Works
