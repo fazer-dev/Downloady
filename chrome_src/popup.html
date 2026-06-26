@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            body {
-                background: none;
-            }
+	<style>
 
-            input {
-                width: 100%;
-                margin-bottom: 8px;
-            }
+		#popup {
+		background-color: rgb(30, 30, 30);
+		color: rgb(255, 255, 255);
+		font-family: Arial, Helvetica, sans-serif;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		}
+
+		body {
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		overflow: hidden;
+		}
+
+
         </style>
     </head>
     <div id="popup">
     <body>
-
-        <input type="checkbox" id="enabled" name="ennabled" value="enabled">
-        <p>Enable Download Control</p>
-        <script src="popup.js"></script>
-
+	<label>
+        	<input type="checkbox" id="enabled" name="ennabled" value="enabled">
+        	Enable Download Control
+        
+	</label>
+		<script src="popup.js"></script>
     </body>
     </div>
 </html>
